@@ -145,4 +145,13 @@ public class AdminConfig
     
     @Property(key = "gameserver.administration.command.prison", defaultValue = "3")
     public static int			COMMAND_PRISON;
+	
+    @Property(key = "gameserver.administration.command.movetomeallall", defaultValue = "3")
+    public static int           COMMAND_MOVETOMEALLALL;
+
+    @Property(key = "gameserver.administration.command.movetomeallelyos", defaultValue = "3")
+    public static int           COMMAND_MOVETOMEALLELYOS;
+
+    @Property(key = "gameserver.administration.command.movetomeallasmos", defaultValue = "3")
+    public static int           COMMAND_MOVETOMEALLASMOS;
 }
