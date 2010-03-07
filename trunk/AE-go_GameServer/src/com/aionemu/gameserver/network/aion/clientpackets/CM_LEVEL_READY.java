@@ -18,7 +18,6 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
-import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
@@ -72,7 +71,7 @@ public class CM_LEVEL_READY extends AionClientPacket
 
 		// here check flying zone may be to disallow teleporting itself
 		activePlayer.unsetState(CreatureState.FLYING);
-		activePlayer.setVisualState(CreatureVisualState.BLINKING);
+		activePlayer.getController().startProtectionActiveTask();
 
 		sendPacket(new SM_PLAYER_INFO(activePlayer, false));
 
