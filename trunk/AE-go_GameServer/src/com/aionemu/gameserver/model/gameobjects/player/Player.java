@@ -81,7 +81,7 @@ public class Player extends Creature
 	private int					flyState		= 0;
 	private boolean				isTrading;
 	private long				prisonTimer		= 0;
-	
+	private boolean				invul;
 	/**
 	 * Static information for players
 	 */
@@ -759,4 +759,26 @@ public class Player extends Creature
 	{
 		return isInVisualState(CreatureVisualState.BLINKING);
 	}
+	
+	/**
+	 * Check is player is invul
+	 * 
+	 * @return boolean
+	 **/
+	public boolean isInvul()
+	{
+		return invul;
+	}
+
+	/**
+	 * Sets invul on player
+	 * 
+	 * @param invul
+	 *            - boolean
+	 **/
+	public void setInvul(boolean invul)
+	{
+		this.invul = invul;
+	}
+
 }

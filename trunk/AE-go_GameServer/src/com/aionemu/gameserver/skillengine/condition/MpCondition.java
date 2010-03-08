@@ -23,31 +23,20 @@ import javax.xml.bind.annotation.XmlType;
 
 import com.aionemu.gameserver.skillengine.model.Skill;
 
-
 /**
  * @author ATracer
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "MpCondition")
-public class MpCondition
-    extends Condition
+public class MpCondition extends Condition
 {
 
-    @XmlAttribute(required = true)
-    protected int value;
-    
-    @XmlAttribute
-    protected int delta;
+	@XmlAttribute(required = true)
+	protected int	value;
 
-    /**
-     * Gets the value of the value property.
-     * 
-     */
-    public int getValue() 
-    {
-        return value;
-    }
+	@XmlAttribute
+	protected int	delta;
 
 	@Override
 	public boolean verify(Skill skill)
