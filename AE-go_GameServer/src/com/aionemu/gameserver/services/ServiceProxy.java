@@ -59,6 +59,10 @@ public class ServiceProxy
 	private WarehouseExpandService	warehouseExpandService;
 	@Inject
 	private PlayerService			playerService;
+	@Inject
+	private ZoneService				zoneService;
+	@Inject
+	private DuelService				duelService;
 
 	/**
 	 * @return the world
@@ -186,5 +190,21 @@ public class ServiceProxy
 	public PlayerService getPlayerService()
 	{
 		return playerService;
+	}
+
+	/**
+	 * @return the zoneService
+	 */
+	public ZoneService getZoneService()
+	{
+		return zoneService;
+	}
+
+	/**
+	 * @return the duelService
+	 */
+	public DuelService getDuelService()
+	{
+		return duelService;
 	}
 }
